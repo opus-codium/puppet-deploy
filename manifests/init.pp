@@ -1,12 +1,13 @@
-class deploy inherits deploy::params {
+class deploy (
+  $user = $deploy::params::user,
+  $group = $deploy::params::group,
+  $home = $deploy::params::home,
+  $system = $deploy::params::system,
+) inherits deploy::params {
   user { $deploy::user:
-    ensure => present,
-    system => $deploy::system,
-  }
-  file { $deploy::home:
-    ensure => directory,
-    owner  => $deploy::user,
-    group  => $deploy::group,
-    mode   => '0755',
+    ensure     => present,
+    home       => $home,
+    system     => $system,
+    managehome => true,
   }
 }
