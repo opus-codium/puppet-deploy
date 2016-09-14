@@ -10,4 +10,9 @@ class deploy (
     system     => $system,
     managehome => true,
   }
+  exec { "/usr/bin/ssh-keygen -q -f ${home}/.ssh/id_rsa -N ''":
+    user    => $user,
+    group   => $group,
+    creates => "${home}/.ssh/id_rsa.pub",
+  }
 }
