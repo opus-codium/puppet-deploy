@@ -1,7 +1,7 @@
 define deploy (
-  $user = 'deploy',
-  $group = 'deploy',
-  $home = '/home/deploy',
+  $user = $title,
+  $group = $title,
+  $home = "/home/${title}",
   $system = true,
 ) {
   user { $user:
