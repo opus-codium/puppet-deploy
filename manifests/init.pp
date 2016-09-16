@@ -3,12 +3,15 @@ define deploy (
   $group = $title,
   $home = "/home/${title}",
   $system = true,
+  $manage_user = true,
 ) {
-  user { $user:
-    ensure     => present,
-    home       => $home,
-    system     => $system,
-    managehome => true,
+  if $manage_user {
+    user { $user:
+      ensure     => present,
+      home       => $home,
+      system     => $system,
+      managehome => true,
+    }
   }
   exec { "/usr/bin/ssh-keygen -q -f ${home}/.ssh/id_rsa -N ''":
     user    => $user,
