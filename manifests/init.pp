@@ -1,10 +1,10 @@
-class deploy (
-  $user = $deploy::params::user,
-  $group = $deploy::params::group,
-  $home = $deploy::params::home,
-  $system = $deploy::params::system,
-) inherits deploy::params {
-  user { $deploy::user:
+define deploy (
+  $user = 'deploy',
+  $group = 'deploy',
+  $home = '/home/deploy',
+  $system = true,
+) {
+  user { $user:
     ensure     => present,
     home       => $home,
     system     => $system,
