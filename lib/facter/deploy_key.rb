@@ -8,6 +8,8 @@ require 'facter'
   next unless File.exist?(rsa_pub_key)
 
   Facter.add("#{login}_key") do
-    File.read(rsa_pub_key)
+    setcode do
+      File.read(rsa_pub_key)
+    end
   end
 end
