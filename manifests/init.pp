@@ -1,3 +1,10 @@
+# @summary Manage deployment users SSH keys
+#
+# @param user Name of the user
+# @param group Group of the user
+# @param home Home directory of the user
+# @param system Indicates if the user is a system user
+# @param manage_user Indicate if the user should be managed by the module
 define deploy (
   $user = $title,
   $group = $title,
