@@ -6,11 +6,11 @@
 # @param system Indicates if the user is a system user
 # @param manage_user Indicate if the user should be managed by the module
 define deploy (
-  $user = $title,
-  $group = $title,
-  $home = "/home/${title}",
-  $system = true,
-  $manage_user = true,
+  String  $user        = $title,
+  String  $group       = $title,
+  String  $home        = "/home/${title}",
+  Boolean $system      = true,
+  Boolean $manage_user = true,
 ) {
   if $manage_user {
     user { $user:
