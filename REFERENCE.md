@@ -10,15 +10,21 @@
 
 ## Defined types
 
-### `deploy`
+### <a name="deploy"></a>`deploy`
 
 Manage deployment users SSH keys
 
 #### Parameters
 
-The following parameters are available in the `deploy` defined type.
+The following parameters are available in the `deploy` defined type:
 
-##### `user`
+* [`user`](#-deploy--user)
+* [`group`](#-deploy--group)
+* [`home`](#-deploy--home)
+* [`system`](#-deploy--system)
+* [`manage_user`](#-deploy--manage_user)
+
+##### <a name="-deploy--user"></a>`user`
 
 Data type: `String`
 
@@ -26,7 +32,7 @@ Name of the user
 
 Default value: `$title`
 
-##### `group`
+##### <a name="-deploy--group"></a>`group`
 
 Data type: `String`
 
@@ -34,7 +40,7 @@ Group of the user
 
 Default value: `$title`
 
-##### `home`
+##### <a name="-deploy--home"></a>`home`
 
 Data type: `String`
 
@@ -42,19 +48,19 @@ Home directory of the user
 
 Default value: `"/home/${title}"`
 
-##### `system`
+##### <a name="-deploy--system"></a>`system`
 
 Data type: `Boolean`
 
 Indicates if the user is a system user
 
-Default value: ``true``
+Default value: `true`
 
-##### `manage_user`
+##### <a name="-deploy--manage_user"></a>`manage_user`
 
 Data type: `Boolean`
 
 Indicate if the user should be managed by the module
 
-Default value: ``true``
+Default value: `true`
 
