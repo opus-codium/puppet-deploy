@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'facter'
 
 if File.executable?('/usr/bin/getent')
