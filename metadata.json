@@ -8,6 +8,7 @@
   "project_page": "https://github.com/opus-codium/puppet-deploy",
   "issues_url": "https://github.com/opus-codium/puppet-deploy/pulls",
   "dependencies": [
+
   ],
   "operatingsystem_support": [
     {
@@ -15,7 +16,7 @@
       "operatingsystemrelease": [
         "10",
         "11",
-	"12"
+        "12"
       ]
     },
     {
@@ -30,8 +31,8 @@
   ],
   "requirements": [
     {
-      "name": "puppet",
-      "version_requirement": ">= 7.0.0 < 9.0.0"
+      "name": "openvox",
+      "version_requirement": ">= 8.19.0 < 9.0.0"
     }
   ]
 }
